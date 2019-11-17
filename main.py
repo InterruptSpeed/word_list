@@ -29,7 +29,7 @@ def get_words(fname: str) -> list:
     new_words = list(set("\n".join(lines).split(" ")))
     # TODO: be more pythonic with the replaces
     new_words = [x.replace("\n", "").replace("“", "").replace("”", "").lower() for x in new_words]
-    pattern = r'^[a-zA-Z]*$'
+    pattern = r'^[a-zA-Z]+$'
     new_words = [x.strip() for x in new_words if re.search(pattern, x)]
     new_words.sort()
 
